@@ -1,0 +1,77 @@
+.form {
+  margin-bottom: 2rem;
+
+  .perdeu {
+    display: inline-block;
+    color: #666;
+    padding: .5rem 0;
+    line-height: 1;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: currentColor;
+    }
+  }
+}
+
+.cadastro {
+  margin-top: 4rem;
+
+  p {
+    margin: 2rem 0;
+  }
+
+  .sub-title {
+    font-family: $typeSecond;
+    line-height: 1;
+    font-size: 2rem;
+
+    &::after {
+      content: '';
+      display: block;
+      background: #ddd;
+      height: .5rem;
+      width: 3rem;
+      border-radius: .2rem;
+    }
+  }
+}
+
+.wrapper {
+  margin-bottom: 1rem;
+
+  .label {
+    display: block;
+    font-size: 1rem;
+    line-height: 1;
+    padding-bottom: .5rem;
+  }
+
+  .input {
+    border: 1px solid #eee;
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    padding: .8rem;
+    border-radius: .4rem;
+    background: #eee;
+    transition: .2s;
+
+    &:focus,
+    &:hover {
+      outline: none;
+      border-color: $primaryColor;
+      background: #FFF;
+      box-shadow: 0 0 0 3px $lightYellow;
+    }
+  }
+
+  .error {
+    color: $colorError;
+    font-size: .875rem;
+    margin-top: .25rem;
+  }
+}
