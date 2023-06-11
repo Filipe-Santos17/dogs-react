@@ -97,3 +97,15 @@ export function commentPost(id, comment) {
     },
   };
 }
+
+export function photoDelete(id) {
+  return {
+    url: `${apiUrl}/api/photo/${id}`,
+    options: {
+      method: "DELETE",
+      headers: {
+        Authorization: "Bearer " + localStorage.getItem('token'),
+      },
+    },
+  };
+}

@@ -1,0 +1,30 @@
+.img-wrapper-load{
+  display: grid;
+
+  .skeleton-img-load{
+    grid-area: 1 / 1;
+    height: 100%;
+    background-image: linear-gradient(90deg, #EEE 0px, #FFF 50%, #EEE 100%);
+    background-color: #EEE;
+    background-size: 200%; //Coloque maior que o tamanho normal para ocupar toda a tela
+    animation: skeleton 1.5s infinite linear;
+  }
+
+  img{
+    display: block;
+    max-width: 100%;
+    grid-area: 1 / 1;
+    opacity: 0;
+    transition: .2s;
+  }
+}
+
+@keyframes skeleton {
+  from {
+    background-position: 0px;
+  }
+
+  to{
+    background-position: -200%;
+  }
+}

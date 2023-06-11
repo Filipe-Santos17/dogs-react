@@ -1,0 +1,74 @@
+.box-comments {
+  overflow-y: auto;
+  word-break: break-word;
+  padding: 0 2rem;
+
+  li {
+    margin-bottom: .5rem;
+    line-height: 1.2;
+  }
+}
+
+.form-comment {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: stretch;
+  margin: 1rem;
+
+  textarea {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-family: $typeFirst;
+    resize: none;
+    border: 1px solid #EEE;
+    padding: .5rem;
+    border-radius: .2rem;
+    background: #EEE;
+    transition: .2s;
+
+    &:focus,
+    &:hover {
+      outline: none;
+      border-color: $primaryColor;
+      background: #FFF;
+      box-shadow: 0 0 0 3px $lightYellow;
+    }
+  }
+
+  button {
+    border: none;
+    cursor: pointer;
+    color: #333;
+    background: transparent;
+    font-size: 1rem;
+    padding: 0 1rem;
+    overflow: hidden;
+
+    &:focus,
+    &:hover {
+      outline: none;
+
+      svg{
+        path {
+          fill: $lightYellow;
+          stroke: $primaryColor;
+        }
+        
+        g{
+          animation: latir .6s infinite;          
+        }
+      }
+    }
+  }
+}
+
+@keyframes latir {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

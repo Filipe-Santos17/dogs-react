@@ -25,7 +25,7 @@ export default function PhotoCommentsForm({ id, comments, setComments}) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="form-comment" onSubmit={handleSubmit}>
       <textarea id="comente" name="comente" placeholder="Comente..." value={comment} onChange={handleComment}></textarea>
       <button>
         <EnviarBtn />
