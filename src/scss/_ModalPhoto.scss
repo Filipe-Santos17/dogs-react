@@ -85,6 +85,29 @@
     }
   }
 
+  &.modal-photo-single{
+    grid-template-columns: 1fr;
+    height: auto;
+
+    .modal-photo-details{
+      padding: 1rem 0 0;
+    }
+
+    .image-photo{
+      grid-row: 1;
+      border-radius: .2rem;
+      overflow: hidden;
+    }
+
+    .box-comments {
+      padding: 0;
+    }
+
+    .form-comment {
+      margin: 1rem 0;
+    }
+  }
+  
   @media (max-width: 64rem) {
     height: auto;
     max-height: calc(100vh - 4rem);

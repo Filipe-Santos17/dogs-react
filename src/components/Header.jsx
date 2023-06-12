@@ -13,8 +13,8 @@ export default function Header() {
           <Dogs />
         </Link>
         {data ? (
-          <Link to="/account" className="login-link">
-            {data.name}
+          <Link to="/conta" className="login-link">
+            {data.nome}
           </Link>
         ) : (
           <Link to="/login" className="login-link">

@@ -1,10 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import UserHeader from "./UserHeader";
-import UserFeed from "../components/Feed/Feed";
-import UserPhotoPost from "../components/Feed/PhotoPost";
-import UserEstatisticas from "../components/Feed/Estatisticas";
+import UserFeed from "../Feed/Feed";
+import UserPhotoPost from "../Feed/PhotoPost";
+import UserEstatisticas from "../Feed/Estatisticas";
 import { useContext } from "react";
-import { UserContext } from "../userContext";
+import { UserContext } from "../../userContext";
+import NotFound from "../NotFound";
 
 export default function Users() {
   const { data } = useContext(UserContext);
@@ -16,6 +17,7 @@ export default function Users() {
         <Route path="/" element={<UserFeed user={data.id} />} />
         <Route path="postar/" element={<UserPhotoPost />} />
         <Route path="estatisticas/" element={<UserEstatisticas />} />
+        <Route path="*" element={<NotFound/>} /> 
       </Routes>
     </section>
   );

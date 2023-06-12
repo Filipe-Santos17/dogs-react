@@ -5,12 +5,12 @@ import { UserContext } from "../../userContext";
 import PhotoDelete from "./PhotoDelete";
 import Image from "../../Helpers/Image";
 
-export default function PhotoContent({ data }) {
+export default function PhotoContent({ data, singlePhoto = false }) {
   const user = useContext(UserContext);
   const { photo, comments } = data;
 
   return (
-    <div className="modal-photo">
+    <div className={`modal-photo ${singlePhoto ? 'modal-photo-single' : ''}`}>
       <div className="modal-photo-img">
         <Image src={photo.src} alt={photo.title}/>
       </div>

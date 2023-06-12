@@ -1,12 +1,12 @@
 import { useContext, useEffect, useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
-import { UserContext } from "../userContext";
+import { UserContext } from "../../userContext";
 
-import { ReactComponent as GridSvg } from "../assets/grid.svg"; //Assim o React faz o create element
-import { ReactComponent as AdicionarPlus } from "../assets/adicionarPlus.svg";
-import { ReactComponent as Tabelas } from "../assets/tabelas.svg";
-import { ReactComponent as Sair } from "../assets/sair.svg";
-import useMedia from "../hooks/useMedia";
+import { ReactComponent as GridSvg } from "../../assets/grid.svg"; //Assim o React faz o create element
+import { ReactComponent as AdicionarPlus } from "../../assets/adicionarPlus.svg";
+import { ReactComponent as Tabelas } from "../../assets/tabelas.svg";
+import { ReactComponent as Sair } from "../../assets/sair.svg";
+import useMedia from "../../hooks/useMedia";
 
 export default function UserHeaderNav() {
   const [mobileMenu, setMobileMenu] = useState(false);
