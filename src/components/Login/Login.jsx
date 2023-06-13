@@ -6,6 +6,7 @@ import LoginPasswordLost from "./LoginPasswordLost";
 import LoginPasswordReset from "./LoginPasswordReset";
 import { UserContext } from "../../userContext";
 import NotFound from "../NotFound";
+import Head from "../../Helpers/Head";
 
 export default function Login() {
   const { login } = useContext(UserContext);
@@ -16,16 +17,19 @@ export default function Login() {
   }
 
   return (
-    <section className="login">
-      <div className="forms">
-        <Routes>
-          <Route path="/" element={<LoginForm />} />
-          <Route path="create" element={<LoginCreate />} />
-          <Route path="perdeu" element={<LoginPasswordLost />} />
-          <Route path="reset" element={<LoginPasswordReset />} />
-          <Route path="*" element={<NotFound/>} /> 
-        </Routes>
-      </div>
-    </section>
+    <>
+      <Head title="Login" description="login" />
+      <section className="login">
+        <div className="forms">
+          <Routes>
+            <Route path="/" element={<LoginForm />} />
+            <Route path="create" element={<LoginCreate />} />
+            <Route path="perdeu" element={<LoginPasswordLost />} />
+            <Route path="reset" element={<LoginPasswordReset />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
+      </section>
+    </>
   );
 }

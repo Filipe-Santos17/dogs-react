@@ -44,7 +44,7 @@ export default function LoginForm() {
         <InputForm label="Usuário" type="text" nameId="username" {...username} />
         <InputForm label="Senha" type="password" nameId="password" {...password} />
         {loading ? <ButtonForm disabled>Carregando...</ButtonForm> : <ButtonForm type="submit">Entrar</ButtonForm>}
-        <ErrorMsg err={error} />
+        <ErrorMsg err={"Dados Incorretos"} />
       </form>
       <Link to={"/login/perdeu/"} className="perdeu">Perdeu a senha</Link>
       <div className="cadastro">

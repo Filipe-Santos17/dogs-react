@@ -10,7 +10,7 @@ export default function FeedPhotos({user, page, setPhoto, total, setInfinite}) {
 
   useEffect(() => {
     async function fetchPhotos() {
-      const { url, options } = photosGet({ page, total, user});
+      const { url, options } = photosGet({page, total, user});
       const { response, json } = await request(url, options);
 
       if(response && response.ok && json.length < total){

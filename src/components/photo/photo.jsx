@@ -5,6 +5,7 @@ import { photoGet } from "../../api";
 import ErrorMsg from "../../Helpers/ErrorMsg";
 import Loading from "../../Helpers/Loading";
 import PhotoContent from "./photoContent";
+import Head from "../../Helpers/Head";
 
 export default function Photo() {
   const { id } = useParams();
@@ -19,16 +20,19 @@ export default function Photo() {
     return <ErrorMsg err={erro} />;
   }
 
-  if(load){
-    return <Loading/>
+  if (load) {
+    return <Loading />;
   }
 
-  if(data){
+  if (data) {
     return (
-      <section className="container mainContainer">
-        <PhotoContent data={data} singlePhoto={true}/>
-      </section>
-    )
+      <>
+        <Head title={data.photo.title} />
+        <section className="container mainContainer">
+          <PhotoContent data={data} singlePhoto={true} />
+        </section>
+      </>
+    );
   }
-  return null
+  return null;
 }

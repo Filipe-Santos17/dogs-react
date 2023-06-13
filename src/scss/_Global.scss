@@ -36,7 +36,7 @@ li {
   margin: 0;
 }
 
-a{
+a {
   text-decoration: none;
   color: #666;
 }
@@ -60,7 +60,7 @@ input {
   margin: 0 auto;
 }
 
-.main-container{
+.main-container {
   margin-top: 4rem;
 }
 
@@ -83,26 +83,26 @@ input {
     box-shadow: 0 0 0 3px $lightYellow, 0 0 0 4px $primaryColor;
   }
 
-  &:disabled{
+  &:disabled {
     opacity: .5;
     cursor: wait;
-  } 
+  }
 }
 
-.animeLeft{
+.animeLeft {
   opacity: 0;
   transform: translateX(-20px);
   animation: animeLeft .3s forwards;
 }
 
 @keyframes animeLeft {
-  to{
+  to {
     opacity: 1;
     transform: initial
-  } 
+  }
 }
 
-.title{
+.title {
   font-family: $typeSecond;
   line-height: 1;
   font-size: 3rem;
@@ -110,21 +110,43 @@ input {
   position: relative;
   z-index: 1;
 
-  &::after{
+  &::after {
     content: '';
     position: absolute;
     display: block;
     width: 1.5rem;
     height: 1.5rem;
     background: $primaryColor;
-    bottom:  5px;
+    bottom: 5px;
     left: -5px;
     border-radius: .2rem;
     z-index: -1;
   }
 }
 
-.error-message{
+.error-message {
   color: $colorError;
   margin: 1rem 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh + 10rem);
+
+  .app-body {
+    flex: 1;
+  }
+}
+
+.footer {
+  background: $primaryColor;
+  padding: 3rem 1rem 0;
+  height: 10rem;
+  text-align: center;
+  color: #764701;
+
+  p {
+    margin-top: 1rem;
+  }
 }

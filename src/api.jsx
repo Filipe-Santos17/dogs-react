@@ -65,7 +65,7 @@ export function photoPost(formdata, token) {
 
 export function photosGet({ page, total, user }) {
   return {
-    url: `${apiUrl}/api/photo/?_page=${page}&_total=${total}&_user=${user}`,
+    url: `${apiUrl}/api/photo/?page=${page}&total=${total}&user=${user}`,
     options: {
       method: "GET",
       caches: "no-store",
@@ -132,6 +132,18 @@ export function resetPassword(body) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(body),
+    },
+  };
+}
+
+export function getDataEst() {
+  return {
+    url: `${apiUrl}/api/stats`,
+    options: {
+      method: "GET",
+      headers: {
+        Authorization: "Bearer " + localStorage.getItem('token'),
+      },
     },
   };
 }

@@ -43,13 +43,13 @@ export default function LoginPasswordReset() {
   }
 
   return (
-    <div>
+    <section className="animeLeft">
       <h1 className="title">Resetar a senha</h1>
       <form onSubmit={handleSubmitSenha}>
         <InputForm label={"Nova Senha"} type={"password"} nameId={"password"} {...newPassword} />
         {load ? <ButtonForm disabled>Resetando...</ButtonForm> : <ButtonForm type="submit">Resetar</ButtonForm>}
       </form>
       {erro && <ErrorMsg err={erro} />}
-    </div>
+    </section>
   );
 }
